@@ -20,6 +20,8 @@ onMounted(() => {
   isDark.value = theme === 'dark';
   if (isDark.value) {
     document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
   }
 });
 </script>
@@ -27,7 +29,7 @@ onMounted(() => {
 <template>
   <button
     @click="toggleTheme"
-    class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
+    class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
     aria-label="Toggle theme"
   >
     <!-- 月亮图标 (暗色模式) -->

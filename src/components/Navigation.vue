@@ -10,7 +10,7 @@ const navItems = [
 </script>
 
 <template>
-  <nav class="bg-cream-100 dark:bg-gray-800">
+  <nav class="bg-cream-100 dark:bg-gray-900">
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center h-16">
         <div class="flex-shrink-0">
