@@ -1,0 +1,66 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  tags?: string[];
+}
+
+const { title, description, pubDate, updatedDate, tags } = Astro.props;
+const formattedPubDate = pubDate.toLocaleDateString('zh-CN', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+const formattedUpdatedDate = updatedDate?.toLocaleDateString('zh-CN', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="max-w-4xl mx-auto px-4 py-8">
+    <div class="mb-8">
+      <h1 class="text-4xl font-bold text-gray-800 dark:text-white mb-4">
+        {title}
+      </h1>
+      <div class="flex flex-wrap items-center text-sm text-gray-600 dark:text-gray-400 space-x-4">
+        <time datetime={pubDate.toISOString()}>
+          发布于 {formattedPubDate}
+        </time>
+        {
+          updatedDate && (
+            <time datetime={updatedDate.toISOString()}>
+              更新于 {formattedUpdatedDate}
+            </time>
+          )
+        }
+        {
+          tags && tags.length > 0 && (
+            <div class="flex items-center space-x-2">
+              <span>标签:</span>
+              <div class="flex flex-wrap gap-2">
+                {tags.map((tag) => (
+                  <a
+                    href={`/tags/${tag}`}
+                    class="px-2 py-1 bg-cream-200 dark:bg-gray-700 rounded-md text-sm hover:bg-cream-300 dark:hover:bg-gray-600 transition-colors duration-200"
+                  >
+                    {tag}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )
+        }
+      </div>
+    </div>
+    <div class="prose prose-lg dark:prose-invert max-w-none">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

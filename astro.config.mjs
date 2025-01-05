@@ -1,17 +1,16 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-import vue from '@astrojs/vue';
+import vue from "@astrojs/vue";
 
-import tailwind from '@astrojs/tailwind';
+import tailwind from "@astrojs/tailwind";
 
-import markdoc from '@astrojs/markdoc';
-
-import mdx from '@astrojs/mdx';
-
-import sitemap from '@astrojs/sitemap';
+import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [vue(), tailwind(), markdoc(), mdx(), sitemap()]
+  integrations: [tailwind(), vue(), mdx()],
+  legacy: {
+    collections: true,
+  },
 });
