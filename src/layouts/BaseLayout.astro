@@ -1,0 +1,17 @@
+---
+import BaseHead from '../components/BaseHead.vue';
+import Navigation from '../components/Navigation.vue';
+
+const { title, description, image } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <BaseHead title={title} description={description} image={image} client:load />
+  </head>
+  <body class="bg-white dark:bg-gray-900 min-h-screen">
+    <Navigation client:load />
+    <slot />
+  </body>
+</html>
