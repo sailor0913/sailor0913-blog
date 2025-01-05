@@ -1,4 +1,6 @@
 <script setup>
+import ThemeToggle from './ThemeToggle.vue';
+
 const navItems = [
   { name: '首页', href: '/' },
   { name: '博客', href: '/blog' },
@@ -8,16 +10,16 @@ const navItems = [
 </script>
 
 <template>
-  <nav class="bg-white dark:bg-gray-800 shadow-lg">
+  <nav class="bg-cream-100 dark:bg-gray-800">
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center h-16">
         <div class="flex-shrink-0">
-          <a href="/" class="text-2xl font-bold text-gray-900 dark:text-white">
+          <a href="/" class="text-2xl font-bold text-gray-800 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200">
             My Blog
           </a>
         </div>
-        <div class="hidden md:block">
-          <div class="ml-10 flex items-center space-x-4">
+        <div class="hidden md:flex md:items-center md:space-x-6">
+          <div class="flex items-center space-x-4">
             <a
               v-for="item in navItems"
               :key="item.name"
@@ -27,6 +29,7 @@ const navItems = [
               {{ item.name }}
             </a>
           </div>
+          <ThemeToggle />
         </div>
       </div>
     </div>
