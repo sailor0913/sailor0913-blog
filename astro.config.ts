@@ -48,10 +48,8 @@ export default defineConfig({
   },
   server: {
     headers: {
-      "Content-Security-Policy": `
-        script-src 'self' 'unsafe-inline' 'unsafe-eval' giscus.app;
-        frame-src 'self' giscus.app;
-      `,
+      "Content-Security-Policy":
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' giscus.app; frame-src 'self' giscus.app",
     },
   },
 });
