@@ -2,7 +2,7 @@
 title: 从0到1系列---微信机器人之ntchat
 pubDate: 2022-09-04
 tags: ["微信机器人"]
-description: "最近发现了一个新的python微信机器人SDK---ntchat，用起来比wechaty感觉要简单一点，项目比较新，感兴趣的同学可以尝试一下"
+description: ""
 ---
 
 > 最近发现了一个新的 python 微信机器人 SDK---[ntchat](https://github.com/sailor0913/ntchat)，用起来比 wechaty 感觉要简单一点，项目比较新，感兴趣的同学可以尝试一下

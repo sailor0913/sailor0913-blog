@@ -2,7 +2,7 @@
 title: 从0到1系列_微信机器人之TS_UOS
 pubDate: 2022-08-07
 tags: ["微信机器人", "JavaScript"]
-description: "看过前面教程的同学应该都了解了如果想用wechaty搭建一个微信机器人必须要有一个puppet的支持，而目前来说最稳定的puppet当属padlocal，但是需要收费且价格不算便宜，对于那些只是想尝鲜或者做测试的同学来说很不友好。今天要介绍的是一个免费的puppet---UOS微信，其实也就是一款桌面版微信。"
+description: ""
 ---
 
 ### 前言

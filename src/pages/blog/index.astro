@@ -30,10 +30,6 @@ const posts: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
                     {post.data.title}
                   </h2>
 
-                  <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
-                    {post.data.description}
-                  </p>
-
                   <div class="flex items-center text-slate-500 dark:text-slate-400 text-base">
                     <time datetime={post.data.pubDate.toISOString()}>
                       {post.data.pubDate.toLocaleDateString('zh-CN', {
@@ -42,6 +38,17 @@ const posts: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
                         day: 'numeric',
                       })}
                     </time>
+                    <span class="mx-2">·</span>
+                    <div class="flex items-center space-x-2">
+                      {post.data.tags.map((tag: string) => (
+                        <a
+                          href={`/tags/${tag}`}
+                          class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
+                        >
+                          #{tag}
+                        </a>
+                      ))}
+                    </div>
                     <span class="mx-2">·</span>
                     <span class="text-blue-600 dark:text-blue-400 group-hover:text-blue-500 dark:group-hover:text-blue-300 transition-colors duration-300">
                       阅读全文
