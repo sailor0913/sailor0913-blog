@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-  darkMode: 'class',
+  darkMode: ['class'],
   theme: {
     extend: {
       colors: {
@@ -17,6 +17,7 @@ export default {
           800: '#E1BD45',
           900: '#D7B12E',
         },
+        'custom-bg': '#FFF9E8',
       },
       typography: {
         DEFAULT: {

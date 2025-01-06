@@ -1,0 +1,32 @@
+---
+const socialLinks = [
+  {
+    name: "GitHub",
+    url: "https://github.com/sailor0913",
+    icon: "/github.svg"
+  },
+  {
+    name: "Bilibili",
+    url: "https://space.bilibili.com/479305033",
+    icon: "/bilibili.svg"
+  }
+];
+---
+
+<div class="flex justify-center space-x-6">
+  {socialLinks.map(({ name, url, icon }) => (
+    <a
+      href={url}
+      title={name}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group"
+    >
+      <img
+        src={icon}
+        alt={name}
+        class="w-6 h-6 opacity-60 group-hover:opacity-100 transition-opacity duration-200 dark:invert"
+      />
+    </a>
+  ))}
+</div>

@@ -1,0 +1,64 @@
+---
+const gradientText = "bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent";
+import SocialLinks from './SocialLinks.astro';
+---
+
+<div class="relative min-h-[80vh] flex items-center bg-custom-bg dark:bg-gray-900">
+  <!-- 背景装饰 -->
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute inset-0 opacity-30 dark:opacity-40"
+      style="background-image: radial-gradient(circle at 1px 1px, rgb(226 232 240 / 0.3) 1px, transparent 0);"
+      style="background-size: 40px 40px;">
+    </div>
+  </div>
+
+  <!-- 主要内容 -->
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Logo -->
+      <div class="mb-8 inline-block">
+        <div class="relative w-24 h-24 mx-auto">
+          <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500 to-indigo-500 blur-xl opacity-50 animate-pulse"></div>
+          <div class="relative h-full rounded-2xl bg-custom-bg dark:bg-gray-900 flex items-center justify-center border border-slate-200 dark:border-slate-700">
+            <span class="text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">
+              S
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 标题区域 -->
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
+        <span class="text-slate-900 dark:text-white">Welcome to</span>
+        <br />
+        <span class={gradientText}>My Blog</span>
+      </h1>
+
+      <!-- 副标题 -->
+      <p class="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 mb-8 font-medium">
+        须知少时凌云志，曾许人间第一流
+      </p>
+
+      <!-- 社交链接 -->
+      <div class="mb-12">
+        <SocialLinks />
+      </div>
+
+      <!-- 按钮区域 -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="/blog"
+          class="px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-xl font-medium text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+        >
+          开始阅读
+        </a>
+        <a
+          href="/about"
+          class="px-8 py-4 bg-custom-bg dark:bg-gray-800 text-slate-600 dark:text-slate-300 rounded-xl font-medium text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 border border-slate-200 dark:border-slate-700"
+        >
+          关于我
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
