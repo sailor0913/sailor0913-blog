@@ -26,16 +26,6 @@ const posts: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
             <article class="group">
               <a href={`/blog/${slug}`} class="block">
                 <div class="space-y-4">
-                  {post.data.tags && post.data.tags.length > 0 && (
-                    <div class="flex flex-wrap gap-2">
-                      {post.data.tags.map((tag: string) => (
-                        <span class="text-sm text-blue-600 dark:text-blue-400 font-medium">
-                          #{tag}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-
                   <h2 class="text-3xl font-bold text-slate-800 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                     {post.data.title}
                   </h2>
