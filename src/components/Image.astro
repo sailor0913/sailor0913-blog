@@ -3,15 +3,25 @@ interface Props {
   src: string;
   alt: string;
   class?: string;
+  width?: string;
+  caption?: string;
 }
 
-const { src, alt, class: className } = Astro.props;
+const { src, alt, class: className, width, caption } = Astro.props;
 ---
 
-<img
-  src={src}
-  alt={alt}
-  class={`rounded-lg w-full ${className || ''}`}
-  loading="lazy"
-  decoding="async"
-/>
+<figure class="my-8">
+  <img
+    src={src}
+    alt={alt}
+    class={`rounded-lg mx-auto ${className || ''}`}
+    style={width ? `width: ${width};` : ''}
+    loading="lazy"
+    decoding="async"
+  />
+  {caption && (
+    <figcaption class="text-center text-sm text-gray-600 dark:text-gray-400 mt-2">
+      {caption}
+    </figcaption>
+  )}
+</figure>
