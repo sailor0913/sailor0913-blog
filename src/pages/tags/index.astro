@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TagCloud from '../../components/TagCloud.vue';
+
+const posts = await getCollection('blog');
+---
+
+<BaseLayout title="标签 | My Blog" description="所有文章标签">
+  <main class="container mx-auto px-4 py-16 max-w-3xl">
+    <div class="text-center mb-20">
+      <h1 class="text-6xl font-bold text-slate-800 dark:text-slate-100 mb-4">
+        标签
+      </h1>
+      <div class="w-32 h-1.5 bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 mx-auto rounded-full mb-4 opacity-90"></div>
+      <p class="text-slate-600 dark:text-slate-400 text-xl">浏览所有文章标签</p>
+    </div>
+
+    <TagCloud client:load posts={posts} />
+  </main>
+</BaseLayout>
