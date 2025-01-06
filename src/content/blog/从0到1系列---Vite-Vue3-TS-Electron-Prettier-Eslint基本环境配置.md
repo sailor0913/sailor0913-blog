@@ -1,5 +1,5 @@
 ---
-title: 从0到1系列---Vite+Vue3+TS+Electron+Prettier+Eslint基本环境配置
+title: 从0到1系列---Vite-Vue3-TS-Electron-Prettier-Eslint基本环境配置
 pubDate: 2022-10-23
 tags: ["编程", "JavaScript", "Vue", "Electron"]
 description: "近日使用Vite+Vue3+TS+Electron写一个小项目，遇到了一些问题，尤其是使用vscode配置eslint和prettier的时候。所以特地记录了下搭建流程，形成了自己的工作流，希望能帮助到大家"

@@ -1,5 +1,5 @@
 ---
-title: Pyqt5+playwright实战记录和踩坑分享
+title: Pyqt5-playwright实战记录和踩坑分享
 pubDate: 2023-02-16
 tags: ["Python", "Playwright", "Pyqt5", "爬虫"]
 description: "几年前一朋友对我说他工作中有时候需要把工作网站上的很多新闻内容转换为pdf，他的方法就是打开每一篇新闻---ctrl+p---另存为PDF。如果要转换的数量少还说，如果要转换的数量多，那就是一件很痛苦的事情了。于是他希望我能帮他写一个小工具解决这个痛点。 "
