@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import Giscus from '../components/Giscus.astro';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -62,5 +63,12 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('zh-CN', {
     <div class="prose prose-lg dark:prose-invert max-w-none">
       <slot />
     </div>
+    
+    <Giscus
+      repo="sailor0913/sailor0913-blog"
+      repoId="你的仓库ID"
+      category="Announcements"
+      categoryId="你的分类ID"
+    />
   </article>
 </BaseLayout>
