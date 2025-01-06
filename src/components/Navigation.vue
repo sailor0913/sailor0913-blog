@@ -4,6 +4,7 @@ import ThemeToggle from './ThemeToggle.vue';
 const navItems = [
   { name: '首页', href: '/' },
   { name: '博客', href: '/blog' },
+  { name: '微圈', href: '/microcircle' },
   { name: '标签', href: '/tags' },
   { name: '关于', href: '/about' },
 ];
