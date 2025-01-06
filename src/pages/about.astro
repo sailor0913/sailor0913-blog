@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+
+const skills = [
+  { name: "前端技术", items: ["JavaScript", "Vue", "TypeScript", "Node.js"] },
+  { name: "后端技术", items: ["Python", "GO", "Rust"] },
+  { name: "开发工具", items: ["Cursor", "VS Code", "IntelliJ IDEA", "Docker"] }
+];
+
+const interests = [
+  "📚 阅读",
+  "🎮 游戏",
+  "🏃 运动",
+  "✍️ 写作"
+];
+---
+
+<BaseLayout title="关于我 | My Blog" description="了解更多关于我的信息">
+  <main class="min-h-screen bg-custom-bg dark:bg-gray-900">
+    <div class="container mx-auto px-4 py-16">
+      <div class="max-w-4xl mx-auto">
+        <!-- 头部区域 -->
+        <div class="text-center mb-16">
+          <h1 class="text-4xl font-bold text-slate-900 dark:text-white mb-6">
+            关于我
+          </h1>
+          <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mb-8"></div>
+          <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
+            你好！我是一名热爱折腾的业余程序员。喜欢探索新技术，享受编程带来的乐趣。
+          </p>
+          <SocialLinks />
+        </div>
+
+        <!-- 技能区域 -->
+        <!-- <div class="mb-16">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-8 text-center">
+            技术栈
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {skills.map(category => (
+              <div class="bg-white/50 dark:bg-gray-800 rounded-xl p-6 shadow-lg">
+                <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-4">
+                  {category.name}
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                  {category.items.map(skill => (
+                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div> -->
+
+        <!-- 兴趣爱好 -->
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-8 text-center">
+            兴趣爱好
+          </h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {interests.map(interest => (
+              <div class="bg-white/50 dark:bg-gray-800 rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow">
+                <p class="text-xl text-slate-700 dark:text-slate-300">{interest}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- 座右铭 -->
+        <!-- <div class="text-center">
+          <blockquote class="text-xl italic text-slate-600 dark:text-slate-300">
+            "须知少时凌云志，曾许人间第一流"
+          </blockquote>
+        </div> -->
+      </div>
+    </div>
+  </main>
+</BaseLayout>
