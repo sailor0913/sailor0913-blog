@@ -1,17 +1,20 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import BlogPostLayout from '../../layouts/BlogPostLayout.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  return posts.map((post) => {
-    // 从文件路径中提取 slug
+  return posts.map((post: CollectionEntry<'blog'>) => {
     const slug = post.id.replace(/\.(md|mdx)$/, '');
     return {
       params: { slug },
       props: { post },
     };
   });
+}
+
+interface Props {
+  post: CollectionEntry<'blog'>;
 }
 
 const { post } = Astro.props;
