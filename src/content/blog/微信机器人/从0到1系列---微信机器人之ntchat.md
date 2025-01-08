@@ -1,7 +1,7 @@
 ---
 title: 从0到1系列---微信机器人之ntchat
 pubDate: 2022-09-04
-tags: ["微信机器人"]
+tags: ["微信机器人", "Python"]
 description: ""
 ---
 

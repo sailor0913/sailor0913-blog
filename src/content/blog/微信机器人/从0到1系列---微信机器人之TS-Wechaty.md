@@ -1,7 +1,7 @@
 ---
 title: 从0到1系列---微信机器人之TS-Wechaty
 pubDate: 2022-07-17
-tags: ["微信机器人", "JavaScript", "技术"]
+tags: ["微信机器人", "JavaScript"]
 description: "Wechaty是一个开源的微信对话机器人SDK，原生使用的是TS构建的node.js应用。当然也有别的作者基于此开发的python、Go等版本的wechaty，方便不熟悉ts语言的人使用。"
 ---
 

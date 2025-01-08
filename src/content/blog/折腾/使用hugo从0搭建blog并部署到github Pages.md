@@ -1,7 +1,8 @@
 ---
 title: 使用hugo从0搭建blog并部署到github Pages
 pubDate: 2024-06-04
-tags: ["博客"]
+tags: ["博客", "hugo"]
+
 description: ""
 ---
 
